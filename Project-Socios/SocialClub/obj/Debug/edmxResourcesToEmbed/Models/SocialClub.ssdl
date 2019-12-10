@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SocialClubDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbAfiliados">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Apellido" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Cedula" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Parentesco" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="tbSexoID" Type="int" />
+  </EntityType>
+  <EntityType Name="tbLogin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contrasena" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbMembresia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Membresia" Type="nvarchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbSexo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Genero" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbSocioInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Apellido" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Cedula" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Foto" Type="varbinary(max)" />
+    <Property Name="tbSexoID" Type="int" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="200" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="100" />
+    <Property Name="Celular" Type="nvarchar" MaxLength="100" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="100" />
+    <Property Name="tbAfiliadosID" Type="int" />
+    <Property Name="tbMembresiaID" Type="int" />
+    <Property Name="LugarTrabajo" Type="nvarchar" MaxLength="500" />
+    <Property Name="DireccionOficina" Type="nvarchar" MaxLength="200" />
+    <Property Name="TelefonoOficina" Type="nvarchar" MaxLength="100" />
+    <Property Name="EstadoMenbresia" Type="int" />
+    <Property Name="tbLoginID" Type="int" />
+    <Property Name="FechaIngreso" Type="datetime" />
+    <Property Name="FechaSalida" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__tbAfiliad__tbSex__3B75D760">
+    <End Role="tbSexo" Type="Self.tbSexo" Multiplicity="0..1" />
+    <End Role="tbAfiliados" Type="Self.tbAfiliados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbSexo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbAfiliados">
+        <PropertyRef Name="tbSexoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbSocioIn__tbAfi__412EB0B6">
+    <End Role="tbAfiliados" Type="Self.tbAfiliados" Multiplicity="0..1" />
+    <End Role="tbSocioInfo" Type="Self.tbSocioInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbAfiliados">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbSocioInfo">
+        <PropertyRef Name="tbAfiliadosID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbSocioIn__tbLog__4316F928">
+    <End Role="tbLogin" Type="Self.tbLogin" Multiplicity="0..1" />
+    <End Role="tbSocioInfo" Type="Self.tbSocioInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbLogin">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbSocioInfo">
+        <PropertyRef Name="tbLoginID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbSocioIn__tbMem__4222D4EF">
+    <End Role="tbMembresia" Type="Self.tbMembresia" Multiplicity="0..1" />
+    <End Role="tbSocioInfo" Type="Self.tbSocioInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbMembresia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbSocioInfo">
+        <PropertyRef Name="tbMembresiaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbSocioIn__tbSex__403A8C7D">
+    <End Role="tbSexo" Type="Self.tbSexo" Multiplicity="0..1" />
+    <End Role="tbSocioInfo" Type="Self.tbSocioInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbSexo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbSocioInfo">
+        <PropertyRef Name="tbSexoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SocialClubDBModelStoreContainer">
+    <EntitySet Name="tbAfiliados" EntityType="Self.tbAfiliados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbLogin" EntityType="Self.tbLogin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbMembresia" EntityType="Self.tbMembresia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbSexo" EntityType="Self.tbSexo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbSocioInfo" EntityType="Self.tbSocioInfo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__tbAfiliad__tbSex__3B75D760" Association="Self.FK__tbAfiliad__tbSex__3B75D760">
+      <End Role="tbSexo" EntitySet="tbSexo" />
+      <End Role="tbAfiliados" EntitySet="tbAfiliados" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbSocioIn__tbAfi__412EB0B6" Association="Self.FK__tbSocioIn__tbAfi__412EB0B6">
+      <End Role="tbAfiliados" EntitySet="tbAfiliados" />
+      <End Role="tbSocioInfo" EntitySet="tbSocioInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbSocioIn__tbLog__4316F928" Association="Self.FK__tbSocioIn__tbLog__4316F928">
+      <End Role="tbLogin" EntitySet="tbLogin" />
+      <End Role="tbSocioInfo" EntitySet="tbSocioInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbSocioIn__tbMem__4222D4EF" Association="Self.FK__tbSocioIn__tbMem__4222D4EF">
+      <End Role="tbMembresia" EntitySet="tbMembresia" />
+      <End Role="tbSocioInfo" EntitySet="tbSocioInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbSocioIn__tbSex__403A8C7D" Association="Self.FK__tbSocioIn__tbSex__403A8C7D">
+      <End Role="tbSexo" EntitySet="tbSexo" />
+      <End Role="tbSocioInfo" EntitySet="tbSocioInfo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

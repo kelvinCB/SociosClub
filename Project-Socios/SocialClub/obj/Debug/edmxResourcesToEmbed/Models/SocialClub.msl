@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SocialClubDBModelStoreContainer" CdmEntityContainer="SocialClubDBEntities">
+    <EntitySetMapping Name="tbAfiliados">
+      <EntityTypeMapping TypeName="SocialClubDBModel.tbAfiliado">
+        <MappingFragment StoreEntitySet="tbAfiliados">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Parentesco" ColumnName="Parentesco" />
+          <ScalarProperty Name="tbSexoID" ColumnName="tbSexoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbMembresias">
+      <EntityTypeMapping TypeName="SocialClubDBModel.tbMembresia">
+        <MappingFragment StoreEntitySet="tbMembresia">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Membresia" ColumnName="Membresia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSexoes">
+      <EntityTypeMapping TypeName="SocialClubDBModel.tbSexo">
+        <MappingFragment StoreEntitySet="tbSexo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbLogins">
+      <EntityTypeMapping TypeName="SocialClubDBModel.tbLogin">
+        <MappingFragment StoreEntitySet="tbLogin">
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSocioInfoes">
+      <EntityTypeMapping TypeName="SocialClubDBModel.tbSocioInfo">
+        <MappingFragment StoreEntitySet="tbSocioInfo">
+          <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="tbLoginID" ColumnName="tbLoginID" />
+          <ScalarProperty Name="EstadoMenbresia" ColumnName="EstadoMenbresia" />
+          <ScalarProperty Name="TelefonoOficina" ColumnName="TelefonoOficina" />
+          <ScalarProperty Name="DireccionOficina" ColumnName="DireccionOficina" />
+          <ScalarProperty Name="LugarTrabajo" ColumnName="LugarTrabajo" />
+          <ScalarProperty Name="tbMembresiaID" ColumnName="tbMembresiaID" />
+          <ScalarProperty Name="tbAfiliadosID" ColumnName="tbAfiliadosID" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="tbSexoID" ColumnName="tbSexoID" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

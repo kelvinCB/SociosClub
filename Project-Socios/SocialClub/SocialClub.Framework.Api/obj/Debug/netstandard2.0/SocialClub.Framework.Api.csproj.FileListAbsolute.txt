@@ -1,0 +1,12 @@
+C:\freelancer\Dev ASP\SocialClub\SocialClub.Framework.Api\bin\Debug\netstandard2.0\SocialClub.Framework.Api.deps.json
+C:\freelancer\Dev ASP\SocialClub\SocialClub.Framework.Api\bin\Debug\netstandard2.0\SocialClub.Framework.Api.dll
+C:\freelancer\Dev ASP\SocialClub\SocialClub.Framework.Api\bin\Debug\netstandard2.0\SocialClub.Framework.Api.pdb
+C:\freelancer\Dev ASP\SocialClub\SocialClub.Framework.Api\bin\Debug\netstandard2.0\creaworlds.Core.Framework.dll
+C:\freelancer\Dev ASP\SocialClub\SocialClub.Framework.Api\bin\Debug\netstandard2.0\creaworlds.Core.Framework.pdb
+C:\freelancer\Dev ASP\SocialClub\SocialClub.Framework.Api\obj\Debug\netstandard2.0\SocialClub.Framework.Api.csprojAssemblyReference.cache
+C:\freelancer\Dev ASP\SocialClub\SocialClub.Framework.Api\obj\Debug\netstandard2.0\SocialClub.Framework.Api.csproj.CoreCompileInputs.cache
+C:\freelancer\Dev ASP\SocialClub\SocialClub.Framework.Api\obj\Debug\netstandard2.0\SocialClub.Framework.Api.AssemblyInfoInputs.cache
+C:\freelancer\Dev ASP\SocialClub\SocialClub.Framework.Api\obj\Debug\netstandard2.0\SocialClub.Framework.Api.AssemblyInfo.cs
+C:\freelancer\Dev ASP\SocialClub\SocialClub.Framework.Api\obj\Debug\netstandard2.0\SocialClub.Framework.Api.csproj.CopyComplete
+C:\freelancer\Dev ASP\SocialClub\SocialClub.Framework.Api\obj\Debug\netstandard2.0\SocialClub.Framework.Api.dll
+C:\freelancer\Dev ASP\SocialClub\SocialClub.Framework.Api\obj\Debug\netstandard2.0\SocialClub.Framework.Api.pdb

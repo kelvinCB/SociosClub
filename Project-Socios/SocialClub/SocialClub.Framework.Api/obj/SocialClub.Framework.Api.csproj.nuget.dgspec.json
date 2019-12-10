@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\freelancer\\Dev ASP\\SocialClub\\SocialClub.Framework.Api\\SocialClub.Framework.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Desarrollo\\GEPS\\Dashboard-Backend\\Dashboard.Backend\\creaworlds.Core.Framework\\creaworlds.Core.Framework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Desarrollo\\GEPS\\Dashboard-Backend\\Dashboard.Backend\\creaworlds.Core.Framework\\creaworlds.Core.Framework.csproj",
+        "projectName": "creaworlds.Core.Framework",
+        "projectPath": "C:\\Desarrollo\\GEPS\\Dashboard-Backend\\Dashboard.Backend\\creaworlds.Core.Framework\\creaworlds.Core.Framework.csproj",
+        "packagesPath": "C:\\Users\\QRODEV02\\.nuget\\packages\\",
+        "outputPath": "C:\\Desarrollo\\GEPS\\Dashboard-Backend\\Dashboard.Backend\\creaworlds.Core.Framework\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\QRODEV02\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\freelancer\\Dev ASP\\SocialClub\\SocialClub.Framework.Api\\SocialClub.Framework.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\freelancer\\Dev ASP\\SocialClub\\SocialClub.Framework.Api\\SocialClub.Framework.Api.csproj",
+        "projectName": "SocialClub.Framework.Api",
+        "projectPath": "C:\\freelancer\\Dev ASP\\SocialClub\\SocialClub.Framework.Api\\SocialClub.Framework.Api.csproj",
+        "packagesPath": "C:\\Users\\QRODEV02\\.nuget\\packages\\",
+        "outputPath": "C:\\freelancer\\Dev ASP\\SocialClub\\SocialClub.Framework.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\QRODEV02\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Desarrollo\\GEPS\\Dashboard-Backend\\Dashboard.Backend\\creaworlds.Core.Framework\\creaworlds.Core.Framework.csproj": {
+                "projectPath": "C:\\Desarrollo\\GEPS\\Dashboard-Backend\\Dashboard.Backend\\creaworlds.Core.Framework\\creaworlds.Core.Framework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[2.9.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

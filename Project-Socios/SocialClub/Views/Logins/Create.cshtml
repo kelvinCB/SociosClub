@@ -1,0 +1,94 @@
+﻿@model SocialClub.Models.tbLogin
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm())
+{
+    //@Html.AntiForgeryToken()
+    //Html.EnableClientValidation(true);
+
+    <div class="form-horizontal">
+        <h4>tbLogin</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control"} })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FechaCreacion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FechaCreacion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FechaCreacion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" value="Create" class="btn btn-default" onclick="CrearSocio()" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+
+            function CrearSocio() {
+        url = "@Url.Content("~/Logins/Create")";
+
+        fetch(url, {
+            method: "POST",
+            body: JSON.stringify({
+                Email: document.getElementById("Email").value,
+                Contrasena: document.getElementById("Contrasena").value
+            }),
+            headers: {
+                "Accept": "Application/json",
+                "Content-Type": "application/json"
+            }
+        }
+        ).then(function (response) {
+            if (response.ok)
+                return response.text()
+            else
+                alert("Error " + response.status + ": " + response.statusText)
+            }).then(function (Data){
+                if (Data != "1") {
+                    alert(Data);
+                }
+                else {
+                    document.location.href = "@Url.Content("~/Create/")"
+                }
+        })
+    }
+    </script>
+}
+
+

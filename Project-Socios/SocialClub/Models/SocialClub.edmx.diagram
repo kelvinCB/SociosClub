@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b9ba8dd8f8cd4f759d506f5f89a17427" Name="Diagram1">
+        <EntityTypeShape EntityType="SocialClubDBModel.tbAfiliado" Width="1.5" PointX="7.625" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialClubDBModel.tbMembresia" Width="1.5" PointX="5.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialClubDBModel.tbSexo" Width="1.5" PointX="5.125" PointY="4.625" IsExpanded="true" />
+        <AssociationConnector Association="SocialClubDBModel.FK__tbAfiliad__tbSex__3B75D760" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SocialClubDBModel.tbLogin" Width="1.5" PointX="7.625" PointY="6.25" />
+        <EntityTypeShape EntityType="SocialClubDBModel.tbSocioInfo" Width="1.5" PointX="1.625" PointY="0.875" />
+        <AssociationConnector Association="SocialClubDBModel.FK__tbSocioIn__tbAfi__412EB0B6" />
+        <AssociationConnector Association="SocialClubDBModel.FK__tbSocioIn__tbLog__4316F928" />
+        <AssociationConnector Association="SocialClubDBModel.FK__tbSocioIn__tbMem__4222D4EF" />
+        <AssociationConnector Association="SocialClubDBModel.FK__tbSocioIn__tbSex__403A8C7D" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
